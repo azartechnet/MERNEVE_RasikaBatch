@@ -1,0 +1,14 @@
+<body>
+    <div class="example">FirstDiv</div>
+    <div class="e1">SecondDiv</div>
+    <div class="example">ThirdDiv</div>
+    <script>
+        var elem=document.getElementsByClassName('example')
+        for(var i=0;i<elem.length;i++)
+    {
+        document.write(elem[i].textContent)
+        console.log(i)
+        console.log(elem[i].textContent)
+    }
+    </script>
+</body>

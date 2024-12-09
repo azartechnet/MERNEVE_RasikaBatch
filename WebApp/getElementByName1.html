@@ -1,0 +1,15 @@
+<body>
+    <form>
+        UserName:<input type="text" name="u1" value="mohamed"/>
+        <input type="submit" value="Login"/>
+    </form>
+    <script>
+        var user=document.getElementsByName('u1');
+        for(var i=0;i<user.length;i++)
+    {
+        document.write(user[i].value)
+        console.log(user[i].value)
+    }
+        
+    </script>
+</body>

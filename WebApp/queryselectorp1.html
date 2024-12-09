@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>
+            
+        </title>
+        <style>
+            .example
+            {
+                color: blue;
+            }
+            #unique
+            {
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="example">FirstDiv</div>
+        <div id="unique">SecondDiv</div>
+        <script>
+            var f1=document.querySelector('.example')
+            console.log("Elements::",f1.textContent)
+
+            var f2=document.querySelectorAll('#unique')
+          
+            console.log("Elements is::",f2.textContent)
+      
+        </script>
+    </body>
+</html>
