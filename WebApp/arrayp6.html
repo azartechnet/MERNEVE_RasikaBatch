@@ -1,0 +1,26 @@
+<script>
+    const f1=["a1","a2","a3","a4","a3"]
+
+    //find
+    
+    let f2=f1.find(myfun);
+    function myfun(x) {
+        return x=="a3";
+    }
+    console.log(f2);
+
+    //findIndex
+    let f3=f1.findIndex(myfun);
+    function myfun(x)
+    {
+        return x=="a3";
+    }
+    console.log(f3)
+
+    //findLast
+    let f4=f1.findLast(myfun);
+    function myfun(x) {
+         return x=="a3";
+         }
+         console.log(f4);
+</script>
