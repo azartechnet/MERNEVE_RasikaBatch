@@ -1,0 +1,21 @@
+<body>
+    <form>
+        Enter the value is::<input type="text" id="fname" onblur="myfun()" required>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="demo"></p>
+    <script>
+        function myfun() {
+             var x = document.getElementById("fname").value;
+             document.getElementById("demo").innerHTML="Your enter value is::"+x;
+             if(x=="")
+             {
+                 alert("please enter the value")
+             }
+             else
+             {
+                alert("you have entered the value"+x);
+             }
+            }
+    </script>
+</body>
