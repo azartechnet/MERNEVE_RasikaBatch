@@ -1,0 +1,15 @@
+<p id="d1"></p>
+<p id="d2"></p>
+<script>
+    //creating a Map
+    const f1=new Map([
+        ["name","John"],
+        ["age",30],
+        ["city","New York"]
+    ])
+    let n1=f1.get("name")
+    console.log(f1)
+    document.getElementById("d1").innerHTML="There are"+f1.size+"element in the Map";
+    document.getElementById("d2").innerHTML="The value of name is "+n1;
+
+</script>

@@ -1,0 +1,17 @@
+<p id="demo"></p>
+<script>
+    const k1 = new Set();
+
+    k1.add("a1");
+    k1.add("a2");
+    k1.add("a3");
+    k1.add("a3");
+
+    // Iterate over the values of the Set and display them
+    let output = "";
+    for (let value of k1.values()) {
+        output += value + " "; // Add each value followed by a space
+    }
+
+    document.getElementById("demo").innerHTML = output.trim(); // Display the values
+</script>
