@@ -1,5 +1,58 @@
 <!--Creating a Single Object Literals-->
-<script>
+<!-- <script>
     let obj={name:"azar",age:23,job:"developer"}
     console.log(obj);
+</script> -->
+
+<!-- <script>
+    let obj={name:"azar",age:23,job:"developer"}
+    //using dot notation
+    console.log(obj.name);
+    console.log(obj.age);
+    console.log(obj.job);
+    //using bracket notation
+    console.log(obj["name"]);
+    console.log(obj["age"]);
+    console.log(obj["job"]);
+
+</script> -->
+<!--Modifying object properties-->
+<!-- <script>
+    let obj={name:"azar",age:23,job:"developer"}
+    //using dot notation
+    obj.name="aziz"
+    obj.age=25
+    obj.job="software engineer"
+    console.log(obj);
+
+</script> -->
+<!--Adding a New Properties-->
+<!-- <script>
+    let obj={name:"azar",age:23,job:"developer"}
+    //using dot notation
+    obj.country="pakistan"
+    console.log(obj);
+</script> -->
+<!--Checking if a Property Exists-->
+<!-- <script>
+    let obj={name:"azar",age:23,job:"developer"}
+    //using dot notation
+    console.log(obj.name);
+    console.log(obj.country||"Property Not Found");
+
+</script> -->
+<!--Deleting a Property-->
+<!-- <script>
+    let obj={name:"azar",age:23,job:"developer"}
+    //using dot notation
+    delete obj.name
+    console.log(obj);
+</script> -->
+<!--Iterating object properties-->
+<script>
+    let obj={name:"azar",age:23,job:"developer"}
+    //using for...in loop
+    for(let key in obj){
+        console.log(key+" : "+obj[key]);
+        }
 </script>
