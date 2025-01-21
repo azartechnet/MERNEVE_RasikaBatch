@@ -27,7 +27,7 @@ r1.render(<Sample/>)*/
 
 //Dynamic Rendering
 
-const App=()=>{
+/*const App=()=>{
   const name="Rahul"
   return(
     <div>
@@ -38,4 +38,19 @@ const App=()=>{
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<App/>)
+r1.render(<App/>)*/
+
+//React without JSX
+
+/*const myelem1=React.createElement('h1',null,'welcome')
+const myelem2=React.createElement('p',null,'This is a paragraph')
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+const r2=ReactDOM.createRoot(document.getElementById('root1'))
+r1.render(myelem1)
+r2.render(myelem2)*/
+
+//React with JSX
+
+const myelem=<h1>Welcome</h1>
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(myelem)
