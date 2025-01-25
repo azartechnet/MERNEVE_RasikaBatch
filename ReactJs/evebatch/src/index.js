@@ -51,6 +51,93 @@ r2.render(myelem2)*/
 
 //React with JSX
 
-const myelem=<h1>Welcome</h1>
+/*const myelem=<h1>Welcome</h1>
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(myelem)
+r1.render(myelem)*/
+
+//React List
+/*const Myelem=()=>{
+  return(
+    <div>
+      <h1>My List</h1>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+      <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ol>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Myelem/>)*/
+
+//Conditional Rendering
+//if else statement
+/*const x=100;
+let text="";
+if(x>10){
+  text="Greater than 10"
+  }else{
+    text="Less than 10"
+    }
+    const Myelem=()=>{
+      return(
+        <div>
+          <h1>Conditional Rendering</h1>
+          <p>{text}</p>
+
+        </div>
+      )
+    }
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Myelem/>)*/
+//Nested if else 
+
+/*const x=100;
+let text="";
+if(x>10){
+  if(x>50){
+    text="Greater than 50"
+    }else{
+      text="Greater than 10 but less than 50"
+      }
+      }else{
+        text="Less than 10"
+        }
+        const Myelem=()=>{
+          return(
+            <div>
+              <h1>Conditional Rendering</h1>
+              <p>{text}</p>
+              </div>
+              )
+              }
+              const r1=ReactDOM.createRoot(document.getElementById('root'))
+              r1.render(<Myelem/>)*/
+
+//Else if ladder
+const x=100;
+let text="";
+if(x>100){
+  text="Greater than 100"
+  }else if(x>50){
+    text="Greater than 50"
+    }else if(x>10){
+      text="Greater than 10"
+      }else{
+        text="Less than 10"
+        }
+        const Myelem=()=>{
+          return(
+            <div>
+              
+              <h1>Conditional Rendering</h1>
+              <p>{text}</p>
+            </div>
+            )
+            }
+            const r1=ReactDOM.createRoot(document.getElementById('root'))
+            r1.render(<Myelem/>)
