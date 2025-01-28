@@ -119,7 +119,7 @@ if(x>10){
               r1.render(<Myelem/>)*/
 
 //Else if ladder
-const x=100;
+/*const x=100;
 let text="";
 if(x>100){
   text="Greater than 100"
@@ -140,4 +140,21 @@ if(x>100){
             )
             }
             const r1=ReactDOM.createRoot(document.getElementById('root'))
-            r1.render(<Myelem/>)
+            r1.render(<Myelem/>)*/
+//importing css and bootstrap
+
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+const App=()=>{
+  return(
+    <div>
+      <h1>Conditional Rendering</h1>
+      <button type="button" className="btn btn-primary">ClickHere</button>
+      <button type="button" className="btn btn-info">ClickHere</button>
+      <h2 className="f1">This is Heading</h2>
+      <p id="f2">This is paragraph</p>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<App/>)
