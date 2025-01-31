@@ -150,7 +150,7 @@ const App=()=>{
     <div>
       <h1>Conditional Rendering</h1>
       <button type="button" className="btn btn-primary">ClickHere</button>
-      <button type="button" className="btn btn-info">ClickHere</button>
+      <button type="button" className="btn btn-danger">ClickHere</button>
       <h2 className="f1">This is Heading</h2>
       <p id="f2">This is paragraph</p>
     </div>
