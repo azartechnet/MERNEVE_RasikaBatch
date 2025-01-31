@@ -143,7 +143,7 @@ if(x>100){
             r1.render(<Myelem/>)*/
 //importing css and bootstrap
 
-import './index.css';
+/*import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 const App=()=>{
   return(
@@ -157,4 +157,81 @@ const App=()=>{
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<App/>)
+r1.render(<App/>)*/
+
+//Function Component
+
+/*function Sample()
+{
+  return(
+    <div>
+      <h1>Function Component</h1>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)*/
+
+//class Component
+
+/*class Sample extends React.Component
+  {
+      render()
+      {
+        return(
+          <div>
+            <h1>Class Component</h1>
+          </div>
+        )
+      }
+  }
+  const r1=ReactDOM.createRoot(document.getElementById('root'))
+  r1.render(<Sample/>) */
+
+  //Function component with props
+
+  /*function Sample(props)//Argument Passing
+  {
+     return(
+      <div>
+        <h1>Function Component</h1>
+        <h2>{props.name}</h2>
+        <h2>{props.age}</h2>
+      </div>
+     )
+  }
+  const r1=ReactDOM.createRoot(document.getElementById('root'))
+  r1.render(<Sample name="Rahul" age="25"/>)*/
+
+  //Component in Component
+
+  function Component1()
+  {
+    return(
+      <div>
+        <h1>Component 1</h1>
+        <Component3/>
+      </div>
+    )
+  }
+  function Component2()
+  {
+    return(
+      <div>
+        <h1>Component 2</h1>
+        <Component1/>
+        </div>
+        )
+  }
+  function Component3()
+  {
+    return(
+      <div>
+        <h1>Component 3</h1>
+        
+      </div>
+    )
+  }
+  const r1=ReactDOM.createRoot(document.getElementById('root'))
+
+  r1.render(<Component2/>)
