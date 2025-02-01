@@ -205,7 +205,7 @@ r1.render(<Sample/>)*/
 
   //Component in Component
 
-  function Component1()
+  /*function Component1()
   {
     return(
       <div>
@@ -234,4 +234,57 @@ r1.render(<Sample/>)*/
   }
   const r1=ReactDOM.createRoot(document.getElementById('root'))
 
-  r1.render(<Component2/>)
+  r1.render(<Component2/>)*/
+
+  //Constructor using super
+
+  /*class Sample extends React.Component
+  {
+    constructor()
+    {
+      super()
+      {
+        this.state={
+          name:"Rahul",
+          age:25
+
+      }
+      }
+    }
+    render()
+    {
+       return(
+        <div>
+           <h1>Sample</h1>
+           <h2>name:{this.state.name}</h2>
+           <h2>age:{this.state.age}</h2>
+        </div>
+       )
+    }
+  
+  }
+  const r1=ReactDOM.createRoot(document.getElementById('root'))
+  r1.render(<Sample/>)*/
+
+  //Constructor using props
+
+  class Sample extends React.Component
+  {
+    constructor(props)
+    {
+      super(props)
+      this.state={f1:'green'}
+    }
+    render()
+    {
+      return(
+        <div>
+          <h1>Sample</h1>
+          <h2>color:{this.props.f1}</h2>
+          <h3>AnotherColor::{this.state.f1}</h3>
+        </div>
+      )
+    }
+  }
+  const r1=ReactDOM.createRoot(document.getElementById('root'))
+  r1.render(<Sample f1="red"/>)
