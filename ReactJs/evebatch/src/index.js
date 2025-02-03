@@ -268,7 +268,7 @@ r1.render(<Sample/>)*/
 
   //Constructor using props
 
-  class Sample extends React.Component
+  /*class Sample extends React.Component
   {
     constructor(props)
     {
@@ -287,4 +287,89 @@ r1.render(<Sample/>)*/
     }
   }
   const r1=ReactDOM.createRoot(document.getElementById('root'))
-  r1.render(<Sample f1="red"/>)
+  r1.render(<Sample f1="red"/>)*/
+
+  //React State
+
+  /*class Sample extends React.Component
+  {
+    constructor(props)
+    {
+      super(props)
+      this.state={
+        name:'Rahul',
+        age:35,
+        color:"red"
+      }
+    }
+    render()
+    {
+      return(
+        <div>
+        <h1>Sample</h1>
+        <h2>name:{this.state.name}</h2>
+        <h3>age:{this.state.age}</h3>
+        <h4>color:{this.state.color}</h4>
+        </div>
+      )
+    }
+  }
+  const r1=ReactDOM.createRoot(document.getElementById('root'))
+  r1.render(<Sample/>)*/
+
+  //changing the state object
+
+  /*class Sample extends React.Component
+  {
+    constructor(props)
+    {
+      super(props)
+      this.state={
+        name:'Rahul',
+        age:35,
+        color:"red"
+    }
+    this.handleClick=this.handleClick.bind(this)
+  }
+  handleClick()
+  {
+    this.setState({
+      name:'Rahul Kumar',
+      age:36,
+      color:"blue"
+      })
+  }
+  render()
+  {
+    return(
+      <div>
+        <h1>Sample</h1>
+        <h2>name:{this.state.name}</h2>
+        <h3>age:{this.state.age}</h3>
+        <h4>color:{this.state.color}</h4>
+        <button onClick={this.handleClick}>Click</button>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)*/
+
+//React Event
+
+function Football()
+{
+    const shoot=()=>{
+      alert("Goal scored")
+    }
+    return(
+      <div>
+        <h1>Football</h1>
+        <button onClick={shoot}>Shoot</button>
+        </div>
+    )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football/>)
+
+
