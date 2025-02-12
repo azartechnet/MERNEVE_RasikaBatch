@@ -438,7 +438,7 @@ r1.render(<Garage/>)*/
 
 //React  keys and values
 
-function Car(props)
+/*function Car(props)
 {
   return<li>{props.id}{props.name}</li>
 }
@@ -459,6 +459,63 @@ function Garage()
     )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Garage/>)
+r1.render(<Garage/>)*/
+
+//getDerivedStateFromprops
+
+/*class Header extends React.Component
+{
+  constructor(props)
+  {
+    super(props)
+    this.state={count:0}
+  }
+  static getDerivedStateFromProps(props,state)
+  {
+      console.log("getDerivedStatefromprops")
+      return {count:props.count}
+  }
+  render()
+  {
+     return(
+      <div>
+        <h1>Header</h1>
+        <p>Count:{this.state.count}</p>
+
+      </div>
+     )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Header count={10}/>)*/
+
+//ComponentDidMount
+
+class Header extends React.Component
+{
+  constructor(props)
+  {
+    super(props)
+    this.state={favcolor:"red"}
+  }
+  componentDidMount()
+  {
+    console.log("componentDidMount")
+    setTimeout(()=>{
+      this.setState({favcolor:"blue"})
+    },3000)
+  }
+  render()
+  {
+    return(
+      <div>
+        <h1>Header</h1>
+        <p>My fav color is {this.state.favcolor}</p>
+        </div>
+        )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Header/>)
 
 
