@@ -491,7 +491,7 @@ r1.render(<Header count={10}/>)*/
 
 //ComponentDidMount
 
-class Header extends React.Component
+/*class Header extends React.Component
 {
   constructor(props)
   {
@@ -516,6 +516,49 @@ class Header extends React.Component
   }
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Header/>)
+r1.render(<Header/>)*/
 
+//shouldComponentUpdate
 
+/*class Header extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    this.state = {favcolor:"red"};
+  }
+  shouldComponentUpdate(nextProps,nextState)
+  {
+    console.log("shouldComponentUpdate")
+  }
+  changeColor=()=>{
+    this.setState({favcolor:"blue"})
+  }
+  render()
+  {
+    return(
+      <div>
+        <h1>Header</h1>
+        <p>My fav color is {this.state.favcolor}</p>
+        <button onClick={this.changeColor}>Change Color</button>
+      </div>
+    )
+}
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Header/>)*/
+
+//React useState
+function Counter()
+{
+  const[count,setCount]=React.useState(0);
+  return(
+    <div>
+      <p>Count : {count}</p>
+      <button onClick={()=>setCount(count+1)}>Increment</button>
+      <button onClick={()=>setCount(count-1)}>Decrement</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)
