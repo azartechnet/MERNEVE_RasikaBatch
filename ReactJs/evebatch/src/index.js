@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 
 //Basic Rendering
@@ -586,7 +586,7 @@ r1.render(<UserProfile/>)*/
 
 //useState with Arrays
 
-function TodoList()
+/*function TodoList()
 {
   const [todos,setTodos]=useState(["BuyMilk","BuyEggs","BuyBread"])
 
@@ -605,4 +605,68 @@ function TodoList()
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<TodoList/>)
+r1.render(<TodoList/>)*/
+
+//React REST API POST using useState and useEffect
+
+/*function App()
+{
+  const [user,setUser]=useState([])
+
+  useEffect(()=>{
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response=>response.json())
+    .then(data=>setUser(data))
+  })
+  return(
+    <div>
+      <h1>User</h1>
+      <table>
+        <thead>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>WebSite</th>
+          <th>Action</th>
+        </thead>
+        <tbody>
+          {user.map((user,index)=>(
+            <tr key={index}>
+              <td>{user.id}</td>
+              <td>{user.name}</td>
+              <td>{user.email}</td>
+              <td>{user.website}</td>
+              <td>Edit Delete</td>
+            </tr>
+            ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<App/>)*/
+
+//React userId
+
+function App(){
+  const [user,setUser]=useState([])
+  const [id,setId]=useState(1)
+
+  useEffect(()=>{
+    fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+    .then(response=>response.json())
+    .then(data=>setUser(data))
+  })
+  return(
+    <div>
+        <h1>User</h1>
+        <h2>{user.name}</h2>
+        <h2>{user.email}</h2>
+        <h2>{user.website}</h2>
+        <button onClick={()=>setId(id+1)}>Add</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<App/>)
