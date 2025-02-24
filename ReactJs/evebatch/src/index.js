@@ -649,7 +649,7 @@ r1.render(<App/>)*/
 
 //React userId
 
-function App(){
+/*function App(){
   const [user,setUser]=useState([])
   const [id,setId]=useState(1)
 
@@ -669,4 +669,78 @@ function App(){
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<App/>)
+r1.render(<App/>)*/
+
+//React using without useContext
+
+/*function Component1()
+{
+  const [user,setUser]=useState("mohamed")
+  return(
+    <div>
+      <h1>{user}</h1>
+      <button onClick={()=>setUser("mohamed2")}>ChangeUser</button>
+      <Component2 user={user}/>
+    </div>
+  )
+}
+function Component2(props)
+{
+  return(
+      <div>
+        <h1>{props.user}</h1>
+      </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Component1/>)*/
+
+//React with using useContext
+
+/*import { useContext,createContext } from "react";
+const UserContext=createContext()
+
+function Component1()
+{
+  const [user,setUser]=useState("mohamed")
+  return(
+    <UserContext.Provider value={user}>
+      <div>
+        <h1>{user}</h1>
+        <Component2/>
+      </div>
+    </UserContext.Provider>
+  )
+}
+function Component2()
+{
+  const user=useContext(UserContext)
+  return(
+    <div>
+      <h1>{user}</h1>
+      <button onClick={()=>{alert("User changed")}}>ChangeUser</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Component1/>)*/
+
+//React useRef
+
+import {useRef} from 'react'
+
+function FocusInput()
+{
+  const inputRef=useRef(null)
+  const handleClick=()=>{
+    inputRef.current.focus()
+    }
+    return(
+      <div>
+        <input type="text" ref={inputRef}/>
+        <button onClick={handleClick}>Focus</button>
+      </div>
+    )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<FocusInput/>)
