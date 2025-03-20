@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+      
+        Name:<input type="text"/>
+        <br/>
+        <input type="submit" value="Submit"/>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $("input").focus(function(){
+                $(this).css("background-color", "lightblue");
+            })
+            .blur(function(){
+                $(this).css("background-color", "white");
+            })
+        })
+    </script>
+</html>
